@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <meta charset="utf-8">
+  <title>Thiágo Morais</title>
+
+</head>
+
+<body>
+
+  <table border="2">
+
+    <tr>
+      <th>Produto</th>
+      <th>Preço(R$)</th>
+      <th>Imagem</th>
+    </tr>
+
+    <tr>
+      <td>Feijão</td>
+      <td>4,20</td>
+      <td><img src="https://tempodecozimento.com.br/wp-content/uploads/2017/10/feij%C3%A3o-preto.jpg" alt="Feijão Preto"></td>
+    </tr>
+
+    <tr>
+      <td>Arroz</td>
+      <td>3,50</td>
+      <td><img src="https://tempodecozimento.com.br/wp-content/uploads/2017/11/Fotolia_176406866_XS.jpg" alt="Arroz"></td>
+    </tr>
+
+  </table>
+
+  <table border="2">
+
+    <tr>
+      <th>Produto</th>
+      <th>Preço(R$)</th>
+      <th>Imagem</th>
+    </tr>
+
+    <tr>
+      <td>Feijão</td>
+      <td rowspan="2">4,20</td>
+      <td><img src="/Imagem/feijao.jpg" alt="Feijão Preto" height=""></td>
+    </tr>
+
+    <tr>
+      <td>Arroz</td>
+      <td><img src="/Imagem/arroz.jpg" alt="Arroz" height="900"></td>
+    </tr>
+
+  </table>
+  <hr>
+
+  <form action="index.html" method="post">
+
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome"><br>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" name="endereco"><br>
+
+    <label for="estado">Estado:</label>
+    <select name="estado">
+
+      <option value="paraiba">Paraíba</option>
+      <option value="pernambuco">Pernambuco</option>
+      <option value="saopaulo">São Paulo</option>
+      <option value="riodejaneiro">Rio de Janeiro</option>
+    </select>
+    <br>
+
+    <label for="sexo">Gênero:</label><br>
+    <input type="radio" name="sexo" value="masculino">Masculino
+    <input type="radio" name="sexo" value="feminino">Feminino
+    <input type="radio" name="sexo" value="naobinario">Não binário
+    <input type="radio" name="sexo" value="outro">Outro<br>
+
+    <label for="materiapreferida">Quais as suas matérias preferidas?</label><br>
+    <input type="checkbox" name="materiapreferida" value="portugues">Português -
+    <input type="checkbox" name="materiapreferida" value="java">Java -
+    <input type="checkbox" name="materiapreferida" value="matematica">Matemática -
+    <input type="checkbox" name="materiapreferida" value="php">PHP -<br>
+
+    <label for="habilidades">Resumo de suas habilidades:</label><br>
+    <textarea name="habilidades" rows="8" cols="50"></textarea><br>
+
+    <input type="submit" name="enviar" value="Enviar!">
+
+  </form>
+
+  <form action="index.html" method="post">
+
+    <table border="2">
+
+      <tr>
+          <th colspan="2">Formulário de Cadastramento</th>
+      </tr>
+
+      <tr>
+        <td><label for="nome2">Nome: </label></td>
+        <td><input type="text" name="nome2"></td>
+      </tr>
+
+      <tr>
+        <td><label for="endereco2">Endereço: </label></td>
+        <td><input type="text" name="endereco2"></td>
+      </tr>
+
+      <tr>
+        <td><label for="estado2">Estado: </label></td>
+        <td>
+          <select name="estado2">
+
+            <option value="paraiba2">Paraíba</option>
+            <option value="pernambuco2">Pernambuco</option>
+            <option value="saopaulo2">São Paulo</option>
+            <option value="riodejaneiro2">Rio de Janeiro</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        td
+      </tr>
+
+    </table>
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
