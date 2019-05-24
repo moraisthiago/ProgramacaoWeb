@@ -9,13 +9,10 @@
 
     <main>
 
-      <form class="" action="index.html" method="post">
+      <form class="" action="http://127.0.0.1:5000/alunos/cadastro" method="post">
 
         <label for="nome">Nome: </label>
         <input type="text" name="nome"><br>
-
-        <label for="nascimento">Nascimento: </label>
-        <input type="text" name="nascimento"><br>
 
         <label for="matricula">Matrícula: </label>
         <input type="text" name="matricula"><br>
@@ -23,7 +20,10 @@
         <label for="cpf">CPF: </label>
         <input type="text" name="cpf"><br>
 
-        <input type="submit" name="cadastrar" value="Cadastrar">
+        <label for="nascimento">Nascimento: </label>
+        <input type="text" name="nascimento" placeholder="DD/MM/AAAA"><br>
+
+        <input type="submit" name="cadastrar" value="Cadastrar" >
 
       </form>
 
