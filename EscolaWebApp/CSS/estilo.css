@@ -2,6 +2,8 @@ body {
   font-family: arial, verdana, helvetica, sans-serif;
 }
 
-div.container{
+.container{
+  margin: 0 auto;
   border: 1px solid purple;
+  width: 700px;
 }
