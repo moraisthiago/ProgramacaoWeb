@@ -7,3 +7,12 @@
   flex-direction: row-reverse;
 
 }
+
+.navigation{
+
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+
+}
