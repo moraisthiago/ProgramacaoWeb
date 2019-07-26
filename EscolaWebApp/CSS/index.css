@@ -8,5 +8,32 @@
 .container{
 
   border: 1px solid red;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+  /* Flex */
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+header{
+
+  background-color: #DF0174;
+
+}
+
+main{
+
+  background-color: #7401DF;
+  flex-grow: 1;
+
+}
+
+footer{
+
+  background-color: #08088A;
 
 }
