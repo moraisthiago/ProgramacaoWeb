@@ -1,0 +1,39 @@
+*{
+
+  margin: 0;
+  padding: 0;
+
+}
+
+.container{
+
+  <!-- border: 1px solid red;-->
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  /* Flex */
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+header{
+
+  background-color: #BDBDBD;
+
+}
+
+main{
+
+  background-color: #BDBDBD;
+  flex-grow: 1;
+
+}
+
+footer{
+
+  background-color: #BDBDBD;
+
+}

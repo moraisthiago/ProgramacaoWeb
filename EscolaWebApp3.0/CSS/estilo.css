@@ -1,39 +1,9 @@
-*{
-
-  margin: 0;
-  padding: 0;
-
-}
-
-.container{
-
-  border: 1px solid red;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-
-  /* Flex */
-
-  display: flex;
-  flex-direction: column;
-
-}
-
-header{
-
-  background-color: #DF0174;
-
+body {
+  font-family: arial, verdana, helvetica, sans-serif;
 }
 
 main{
-
-  background-color: #7401DF;
-  flex-grow: 1;
-
-}
-
-footer{
-
-  background-color: #08088A;
-
+  margin: 0 auto;
+  border: 1px solid purple;
+  width: 700px;
 }
