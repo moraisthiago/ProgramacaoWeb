@@ -1,13 +1,12 @@
 *{
 
-  margin: 0;
+  margin: 0.2em;
   padding: 0;
 
 }
 
 .container{
 
-  <!-- border: 1px solid red;-->
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -17,10 +16,6 @@
   display: flex;
   flex-direction: column;
 
-}
-
-center{
-  color: white;
 }
 
 header{
@@ -41,4 +36,4 @@ footer{
 
   background-color: #BDBDBD;
 
-}
+} 
