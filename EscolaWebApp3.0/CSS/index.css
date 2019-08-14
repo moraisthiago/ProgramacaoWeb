@@ -31,9 +31,14 @@ main{
 
 }
 
+img{
+  width: 1340px;
+  height: 600px;
+}
+
 
 footer{
 
   background-color: #BDBDBD;
 
-} 
+}
