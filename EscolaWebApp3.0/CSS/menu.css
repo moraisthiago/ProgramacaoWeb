@@ -26,3 +26,15 @@
 center a, center{
   color: white;
 }
+
+.title, .title a{
+  background-color: #A4A4A4;
+  margin: 0;
+  height: 50px;
+  padding-top: 0.1em;
+}
+
+.subtitle {
+  margin: 0;
+  padding: 0.3em;
+}
