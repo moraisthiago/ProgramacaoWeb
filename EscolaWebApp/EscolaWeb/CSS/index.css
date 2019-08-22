@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.meu-container {
+  border:2px solid black;
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.meu-container  > * {
+  border:4px solid yellow;
+}
+
+header{
+  background-color: rgb(102, 102, 255);
+  /* flex-grow especifica quanto o item crescera em relação ao restante dos itens flexíveis dentro do mesmo content. */
+  flex-grow: 0;
+}
+
+main{
+  background-color: rgb(51, 204, 204);
+  /* flex-grow especifica quanto o item crescera em relação ao restante dos itens flexíveis dentro do mesmo content. */
+  flex-grow: 1;
+
+}
+
+footer {
+  background-color: rgb(51, 102, 153);
+  /* flex-grow especifica quanto o item crescera em relação ao restante dos itens flexíveis dentro do mesmo content. */
+  flex-grow: 0;
+}
