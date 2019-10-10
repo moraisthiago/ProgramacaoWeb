@@ -1,0 +1,63 @@
+<script type="text/javascript">
+
+  let nome = "João da Silva";
+  console.log(nome);
+
+  let nota = 7;
+
+  if(nota >= 7){
+    console.log("Aprovado!");
+  }
+  else{
+    console.log("Reprovado!");
+  }
+
+  let i = 0;
+
+  while(i <= 10){
+    console.log(i);
+    i++;
+  }
+
+  for(i=0; i <= 10; i++){
+    console.log(i);
+  }
+
+  let nomes = ["João", "Maria", "José"];
+
+  for(item of nomes){
+    console.log(item);
+  }
+
+  for (posicao in nomes){
+    console.log(posicao);
+  }
+
+  function soma(a, b){
+    return a + b;
+  }
+
+  let multiplica = function(a, b){return a * b}
+
+  let a = 15;
+  let b = 2;
+
+  console.log(soma(a, b));
+  console.log(multiplica(a,b));
+
+  let aluno = {
+    nome: "Maria da Paz",
+    matricula: "201910000",
+    cpf: "123.654.789-00",
+    endereco: {
+      logradouro: "Buraco do Afonso",
+      complemento: "Perto do chapéu",
+      cep: "58000-000",
+      numero: "90",
+      bairro: "Centro"
+    }
+  };
+
+  console.log(aluno.endereco.cep);
+
+</script>
