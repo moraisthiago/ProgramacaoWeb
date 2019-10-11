@@ -59,26 +59,42 @@
 
       <main ng-controller="AlunoController">
 
-        <form action="http://localhost:5000/aluno" method='post' class="form">
+        <form action="http://localhost:5000/aluno" method='post' name="alunoForm">
 
             <div class="form-group">
               <label for='nome'>Nome do aluno:</label>
-              <input type='text' ng-model='nome' name='nome' class="form-control">
+              <input type='text' ng-model='nome' name='nome' class="form-control" required ng-minlength="10" ng-maxlength="50">
+
+              <div ng-show="alunoForm.nome.$invalid && alunoForm.nome.$dirty" class="alert alert-danger">
+                Por favor, insira o nome de alune!
+              </div>
             </div>
 
             <div class="form-group">
               <label for='matricula'>Matricula:</label>
-              <input type='text' ng-model='matricula' name='matricula' class="form-control">
+              <input type='text' ng-model='matricula' name='matricula' class="form-control" required ng-minlength="12" ng-maxlength="12">
+
+              <div ng-show="alunoForm.matricula.$invalid && alunoForm.matricula.$dirty" class="alert alert-danger">
+                Por favor, insira o número da sua matrícula!
+              </div>
             </div>
 
             <div class="form-group">
               <label for='cpf'>CPF:</label>
-              <input type='text' ng-model='cpf' name='cpf' class="form-control">
+              <input type='text' ng-model='cpf' name='cpf' class="form-control" required ng-minlength="11" ng-maxlength="11">
+
+              <div ng-show="alunoForm.cpf.$invalid && alunoForm.cpf.$dirty" class="alert alert-danger">
+                Por favor, insira o número do seu CPF!
+              </div>
             </div>
 
             <div class="form-group">
               <label for='nascimento'> Data de nascimento: </label>
-              <input type='text' ng-model='nascimento' name='nascimento' class="form-control">
+              <input type='text' ng-model='nascimento' name='nascimento' placeholder="AAAA-MM-DD" class="form-control" required ng-minlength="10" ng-maxlength="10">
+
+              <div ng-show="alunoForm.nascimento.$invalid && alunoForm.nascimento.$dirty" class="alert alert-danger">
+                Por favor, insira sua data de nascimento!
+              </div>
             </div>
 
             <button type="submit" class="btn btn-secondary btn-lg btn-block">Cadastrar</button>

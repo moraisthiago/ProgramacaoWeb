@@ -58,31 +58,51 @@
 
       <main ng-controller="EnderecoController">
 
-        <form action="http://localhost:5000/endereco" method='post'>
+        <form action="http://localhost:5000/endereco" method='post' name="enderecoForm">
 
             <div class="form-group">
               <label for='logradouro'>Logradouro:</label>
-              <input type='text' ng-model='logradouro' name='logradouro' class="form-control">
+              <input type='text' ng-model='logradouro' name='logradouro' class="form-control" required ng-minlength="5" ng-maxlength="200">
+
+              <div ng-show="enderecoForm.logradouro.$invalid && enderecoForm.logradouro.$dirty" class="alert alert-danger">
+                Por favor, insira o seu lograoduro!
+              </div>
             </div>
 
             <div class="form-group">
-              <label for='complemento'>Complemetno:</label>
-              <input type='text' ng-model='complemento' name='complemento' class="form-control">
+              <label for='complemento'>Complemento:</label>
+              <input type='text' ng-model='complemento' name='complemento' class="form-control" required ng-minlength="5" ng-maxlength="20">
+
+              <div ng-show="enderecoForm.complemento.$invalid && enderecoForm.complemento.$dirty" class="alert alert-danger">
+                Por favor, insira o seu complemento!
+              </div>
             </div>
 
             <div class="form-group">
               <label for='bairro'>Bairro:</label>
-              <input type='text' ng-model='bairro' name='bairro' class="form-control">
+              <input type='text' ng-model='bairro' name='bairro' class="form-control" required ng-minlength="3" ng-maxlength="50">
+
+              <div ng-show="enderecoForm.bairro.$invalid && enderecoForm.bairro.$dirty" class="alert alert-danger">
+                Por favor, insira o nome do seu bairro!
+              </div>
             </div>
 
             <div class="form-group">
               <label for='cep'> CEP: </label>
-              <input type='text' ng-model='cep' name='cep' class="form-control">
+              <input type='text' ng-model='cep' name='cep' class="form-control" required ng-minlength="8" ng-maxlength="8">
+
+              <div ng-show="enderecoForm.cep.$invalid && enderecoForm.cep.$dirty" class="alert alert-danger">
+                Por favor, insira o número do seu CEP!
+              </div>
             </div>
 
             <div class="form-group">
               <label for='numero'> Número: </label>
-              <input type='text' ng-model='numero' name='numero' class="form-control">
+              <input type='text' ng-model='numero' name='numero' class="form-control" required ng-minlength="1" ng-maxlength="5">
+
+              <div ng-show="enderecoForm.numero.$invalid && enderecoForm.numero.$dirty" class="alert alert-danger">
+                Por favor, insira o número da sua residência!
+              </div>
             </div>
 
             <button type="submit" class="btn btn-secondary btn-lg btn-block">Cadastrar</button>

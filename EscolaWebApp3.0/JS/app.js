@@ -9,7 +9,7 @@ var indexController = function($scope){
 
   $scope.welcome = function(){
     let nome = $scope.nome;
-    $scope.mensagem = "Olá, " + nome;
+    $scope.mensagem = "Olá, " + nome + "!";
   }
 }
 
