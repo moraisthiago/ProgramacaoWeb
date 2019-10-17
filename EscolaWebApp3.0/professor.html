@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="EscolaWebApp3.0">
+<html ng-app="EscolaWebApp3">
   <head>
     <meta charset="utf-8">
     <title> Cadastrar professor </title>
@@ -62,7 +62,7 @@
 
             <div class="form-group">
               <label for='noe'>Nome:</label>
-              <input type='text' ng-model='nome' name='nome' class="form-control" required ng-minlength="10" ng-maxlength="50">
+              <input type='text' ng-model='nome' name='nome' class="form-control" required ng-minlength="2" ng-maxlength="50">
 
               <div ng-show="professorForm.nome.$invalid && professorForm.nome.$dirty" class="alert alert-danger">
                 Por favor, insira o nome do professor!

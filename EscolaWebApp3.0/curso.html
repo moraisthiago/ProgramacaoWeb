@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="EscolaWebApp3.0">
+<html ng-app="EscolaWebApp3">
   <head>
     <meta charset="utf-8">
     <title> Cadastrar curso </title>
@@ -62,7 +62,7 @@
 
             <div class="form-group">
               <label for='nome'>Nome:</label>
-              <input type='text' ng-model='nome' name='nome' class="form-control" required ng-minlength="5" ng-maxlength="20">
+              <input type='text' ng-model='nome' name='nome' class="form-control" required ng-minlength="2" ng-maxlength="20">
 
               <div ng-show="cursoForm.nome.$invalid && cursoForm.nome.$dirty" class="alert alert-danger">
                 Por favor, insira o nome do seu curso!
@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label for='turno'>Turno:</label>
-              <input type='text' ng-model='turno' name='turno' class="form-control" required ng-minlength="5" ng-maxlength="8">
+              <input type='text' ng-model='turno' name='turno' class="form-control" required ng-minlength="2" ng-maxlength="8">
 
               <div ng-show="cursoForm.turno.$invalid && cursoForm.turno.$dirty" class="alert alert-danger">
                 Por favor, insira o seu turno!

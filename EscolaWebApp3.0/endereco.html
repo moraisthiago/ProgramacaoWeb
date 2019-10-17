@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="EscolaWebApp3.0">
+<html ng-app="EscolaWebApp3">
   <head>
     <meta charset="utf-8">
     <title> Cadastrar endereço </title>
@@ -62,7 +62,7 @@
 
             <div class="form-group">
               <label for='logradouro'>Logradouro:</label>
-              <input type='text' ng-model='logradouro' name='logradouro' class="form-control" required ng-minlength="5" ng-maxlength="200">
+              <input type='text' ng-model='logradouro' name='logradouro' class="form-control" required ng-minlength="2" ng-maxlength="200">
 
               <div ng-show="enderecoForm.logradouro.$invalid && enderecoForm.logradouro.$dirty" class="alert alert-danger">
                 Por favor, insira o seu lograoduro!
@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label for='complemento'>Complemento:</label>
-              <input type='text' ng-model='complemento' name='complemento' class="form-control" required ng-minlength="5" ng-maxlength="20">
+              <input type='text' ng-model='complemento' name='complemento' class="form-control" required ng-minlength="2" ng-maxlength="20">
 
               <div ng-show="enderecoForm.complemento.$invalid && enderecoForm.complemento.$dirty" class="alert alert-danger">
                 Por favor, insira o seu complemento!
@@ -80,7 +80,7 @@
 
             <div class="form-group">
               <label for='bairro'>Bairro:</label>
-              <input type='text' ng-model='bairro' name='bairro' class="form-control" required ng-minlength="3" ng-maxlength="50">
+              <input type='text' ng-model='bairro' name='bairro' class="form-control" required ng-minlength="2" ng-maxlength="50">
 
               <div ng-show="enderecoForm.bairro.$invalid && enderecoForm.bairro.$dirty" class="alert alert-danger">
                 Por favor, insira o nome do seu bairro!

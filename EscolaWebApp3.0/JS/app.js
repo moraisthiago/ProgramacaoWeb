@@ -38,7 +38,7 @@ var cursoController = function($scope){
 
 app.controller('CursoController', cursoController);
 
-var disciplinaControler = function($scope){
+var disciplinaController = function($scope){
   $scope.nome = "";
 }
 
@@ -76,4 +76,4 @@ var turnoController = function($scope){
   $scope.nome = "";
 }
 
-app;controller('TurnoController', turnoController);
+app.controller('TurnoController', turnoController);
