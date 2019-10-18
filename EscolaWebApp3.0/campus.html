@@ -61,21 +61,41 @@
 
         <form action="http://localhost:5000/campus" method='post' name="campusForm">
 
+            <!-- Sigla -->
+
             <div class="form-group">
               <label for='sigla'>Sigla:</label>
-              <input type='text' ng-model='sigla' name='sigla' class="form-control" required ng-minlength="2" ng-maxlength="5">
+              <input type='text' ng-model='sigla' name='sigla' class="form-control" required ng-minlength="2" ng-maxlength="3">
 
-              <div ng-show="campusForm.sigla.$invalid && campusForm.sigla.$dirty" class="alert alert-danger">
+              <div ng-show="campusForm.sigla.$error.required && campusForm.sigla.$dirty" class="alert alert-danger">
                 Por favor, insira a sigla do seu campus!
+              </div>
+
+              <div ng-show="campusForm.sigla.$error.minlength && campusForm.sigla.$dirty" class="alert alert-danger">
+                A sigla deve ter, no mínimo, 2 caracteres!
+              </div>
+
+              <div ng-show="campusForm.sigla.$error.maxlength && campusForm.sigla.$dirty" class="alert alert-danger">
+                A sigla deve ter, no máximo, 3 caracteres!
               </div>
             </div>
 
+            <!-- Cidade -->
+
             <div class="form-group">
               <label for='cidade'>Cidade:</label>
-              <input type='text' bg-nodel='cidade' name='cidade' class="form-control" required ng-minlength="2" ng-maxlength="20">
+              <input type='text' ng-model='cidade' name='cidade' class="form-control" required ng-minlength="2" ng-maxlength="45">
 
-              <div ng-show="campusForm.cidade.$invalid && campusForm.cidade.$dirty" class="alert alert-danger">
+              <div ng-show="campusForm.cidade.$error.required && campusForm.cidade.$dirty" class="alert alert-danger">
                 Por favor, insira o nome da sua cidade!
+              </div>
+
+              <div ng-show="campusForm.cidade.$error.minlength && campusForm.cidade.$dirty" class="alert alert-danger">
+                O nome da cidade deve conter, no mínimo, 2 caracteres!
+              </div>
+
+              <div ng-show="campusForm.cidade.$error.maxlength && campusForm.cidade.$dirty" class="alert alert-danger">
+                O nome da cidade deve conter, no máximo, 45 caracteres!
               </div>
             </div>
 
