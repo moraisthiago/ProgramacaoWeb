@@ -25,7 +25,7 @@ var alunoController = function($scope){
 app.controller('AlunoController', alunoController);
 
 var campusController = function($scope){
-  $scope.silga = "";
+  $scope.sigla = "";
   $scope.cidade = "";
 }
 
