@@ -1,6 +1,6 @@
 //Inicializando Módulos.
 let nomeApp = "EscolaWebApp3";
-let modulos = [];
+let modulos = ["ngMessages"];
 var app = angular.module(nomeApp, modulos);
 
 //Estrutura básica de uma função para um controller.
