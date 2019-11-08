@@ -1,6 +1,6 @@
 // Inicializando Módulos.
 let nomeApp = "EscolaWebApp3";
-let modulos = ["ngMessages"];
+let modulos = ['ngMaterial', 'ngMessages'];
 var app = angular.module(nomeApp, modulos);
 
 // Estrutura básica de uma função para um controller.
@@ -16,16 +16,25 @@ var indexController = function($scope){
 app.controller('IndexController', indexController);
 
 // Aluno - Controller
-var alunoController = function($scope){
+var alunoController = function($scope, $mdToast, alunoApi){
 
   $scope.aluno = {};
 
   $scope.cadastrar = function(){
     alunoApi.cadastrar($scope.aluno)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
+
+app.controller('AlunoController', alunoController);
 
 // Aluno - Factory
 var alunoFactory = function($http){
@@ -59,18 +68,22 @@ var alunoFactory = function($http){
 
 app.factory("alunoApi", alunoFactory);
 
-app.controller('AlunoController', alunoController);
-
-
 // Campus - Controller
-var campusController = function($scope){
+var campusController = function($scope, campusApi){
 
   $scope.campus = {};
 
   $scope.cadastrar = function(){
     campusApi.cadastrar($scope.campus)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
@@ -109,14 +122,21 @@ var campusFactory = function($http){
 app.factory("campusApi", campusFactory);
 
 // Curso - Controller
-var cursoController = function($scope){
+var cursoController = function($scope, cursoApi){
 
   $scope.curso = {};
 
   $scope.cadastrar = function(){
     cursoApi.cadastrar($scope.curso)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
@@ -155,14 +175,21 @@ var cursoFactory = function($http){
 app.factory("cursoApi", cursoFactory);
 
 // Disciplina - Controller
-var disciplinaController = function($scope){
+var disciplinaController = function($scope, disciplinaApi){
 
   $scope.disciplina = {};
 
   $scope.cadastrar = function(){
     disciplinaApi.cadastrar($scope.disciplina)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
@@ -201,14 +228,21 @@ var disciplinaFactory = function($http){
 app.factory("disciplinaApi", disciplinaFactory);
 
 // Endereço - Controller
-var enderecoController = function($scope){
+var enderecoController = function($scope, enderecoApi){
 
   $scope.endereco = {};
 
   $scope.cadastrar = function(){
     enderecoApi.cadastrar($scope.endereco)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
@@ -247,14 +281,21 @@ var enderecoFactory = function($http){
 app.factory("enderecoApi", enderecoFactory);
 
 // Escola - Controller
-var escolaController = function($scope){
+var escolaController = function($scope, escolaApi){
 
   $scope.escola = {};
 
   $scope.cadastrar = function(){
     escolaApi.cadastrar($scope.escola)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
@@ -293,14 +334,21 @@ var escolaFactory = function($http){
 app.factory("escolaApi", escolaFactory);
 
 // Professor - Controller
-var professorController = function($scope){
+var professorController = function($scope, professorApi){
 
   $scope.professor = {};
 
   $scope.cadastrar = function(){
     professorApi.cadastrar($scope.professor)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
@@ -339,14 +387,21 @@ var professorFactory = function($http){
 app.factory("professorApi", professorFactory);
 
 // Turma - Controller
-var turmaController = function($scope){
+var turmaController = function($scope, turmaApi){
 
   $scope.turma = {};
 
   $scope.cadastrar = function(){
     turmaApi.cadastrar($scope.turma)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
@@ -385,14 +440,21 @@ var turmaFactory = function($http){
 app.factory("turmaApi", turmaFactory);
 
 // Turno - Controller
-var turnoController = function($scope){
+var turnoController = function($scope, turnoApi){
 
   $scope.turno = {};
 
   $scope.cadastrar = function(){
     turnoApi.cadastrar($scope.turno)
       .then(function(response) {})
-      .catch(function(error) {});
+      .catch(function(error) {
+        var toast = $mdToast.simple()
+                    .textContent('Algum problema ocorreu no envio dos dados :(')
+                    .position('bottom center')
+                    .action('OK')
+                    .hideDelay(6000);
+        $mdToast.show(toast);
+      });
   }
 }
 
