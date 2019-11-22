@@ -1,0 +1,21 @@
+<div class="imagem">
+
+  <img src="CSS/Imagem/pagina-inicial3.jpg">
+
+</div>
+
+<form name="welcomeForm">
+
+  <div class="form-group">
+
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" class="form-control" ng-model="nome" required ng-minlength="2" ng-maxlength="50">
+    <div ng-show="welcomeForm.nome.$invalid && welcomeForm.nome.$dirty" class="alert alert-danger">
+      Por favor, insira seu nome!
+    </div>
+
+  </div>
+  <button ng-click="welcome()" class="btn btn-dark btn-lg btn-block">Exibir</button>
+  <h1>{{mensagem}}</h1>
+
+</form>

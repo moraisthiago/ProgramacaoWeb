@@ -13,10 +13,15 @@
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.js" type="text/javascript"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+   <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
 
    <!-- Angular Material-->
    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+
+   <!-- Moments -->
+   <script src="https://momentjs.com/downloads/moment.js"></script>
 
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,6 +32,30 @@
 
     <!-- Aplicação Angular-->
     <script src="JS/app.js" type="text/javascript"></script>
+    <script src="JS/Controller/HomeController.js" type="text/javascript"></script>
+    <script src="JS/Controller/AlunoController.js" type="text/javascript"></script>
+    <script src="JS/Controller/CampusController.js" type="text/javascript"></script>
+    <script src="JS/Controller/CursoController.js" type="text/javascript"></script>
+    <script src="JS/Controller/DisciplinaController.js" type="text/javascript"></script>
+    <script src="JS/Controller/EnderecoController.js" type="text/javascript"></script>
+    <script src="JS/Controller/EscolaController.js" type="text/javascript"></script>
+    <script src="JS/Controller/ProfessorController.js" type="text/javascript"></script>
+    <script src="JS/Controller/TurmaController.js" type="text/javascript"></script>
+    <script src="JS/Controller/TurnoController.js" type="text/javascript"></script>
+
+
+    <script src="JS/Factory/AlunoApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/CampusApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/CursoApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/DisciplinaApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/EnderecoApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/EscolaApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/ProfessorApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/TurmaApi.js" type="text/javascript"></script>
+    <script src="JS/Factory/TurnoApi.js" type="text/javascript"></script>
+
+    <script src="JS/Router/Router.js" type="text/javascript"></script>
+
 
   </head>
   <body>
@@ -37,58 +66,29 @@
 
         <div class="title">
 
-          <center> <h2>Cadastros</h2> </center>
+          <center> <h2><a href="/#/">Cadastros</a></h2> </center>
 
         </div>
         <nav>
 
           <ul class="navigation">
-
-            <li><a href="campus.html">Campus</a></li>
-            <li><a href="escola.html">Escola</a></li>
-            <li><a href="aluno.html">Aluno</a></li>
-            <li><a href="curso.html">Curso</a></li>
-            <li><a href="turma.html">Turma</a></li>
-            <li><a href="turno.html">Turno</a></li>
-            <li><a href="professor.html">Professor</a></li>
-            <li><a href="disciplina.html">Disciplina</a></li>
-            <li><a href="endereco.html">Endereço</a></li>
-
-
+            <li><a href="/#/campus">Campus</a></li>
+            <li><a href="/#/escola">Escola</a></li>
+            <li><a href="/#/aluno">Aluno</a></li>
+            <li><a href="/#/curso">Curso</a></li>
+            <li><a href="/#/turma">Turma</a></li>
+            <li><a href="/#/turno">Turno</a></li>
+            <li><a href="/#/professor">Professor</a></li>
+            <li><a href="/#/disciplina">Disciplina</a></li>
+            <li><a href="/#/endereco">Endereço</a></li>
           </ul>
 
         </nav>
 
       </header>
 
-      <main ng-controller="IndexController">
-
-        <div class="imagem">
-
-          <img src="CSS/Imagem/pagina-inicial3.jpg">
-
-        </div>
-
-        <form name="welcomeForm">
-
-          <div class="form-group">
-
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" class="form-control" ng-model="nome" required ng-minlength="2" ng-maxlength="50">
-            <div ng-show="welcomeForm.nome.$invalid && welcomeForm.nome.$dirty" class="alert alert-danger">
-              Por favor, insira seu nome!
-            </div>
-
-          </div>
-          <button ng-click="welcome()" class="btn btn-dark btn-lg btn-block">Exibir</button>
-          <h1>{{mensagem}}</h1>
-
-        </form>
-        <!--
-        <input type="text" name="logradouro" ng-model="yourName" value="">
-        <h1>Meu logradouro é {{yourName}}!</h1>
-       -->
-
+      <main>
+       <ng-view></ng-view>
       </main>
 
       <footer>
