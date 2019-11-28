@@ -34,7 +34,7 @@ app.config(function ($routeProvider, $locationProvider) {
         controller  : 'DisciplinaController'
       })
       .when('/endereco', {
-        templateUrl : 'enderecoe.html',
+        templateUrl : 'endereco.html',
         controller  : 'EnderecoController'
       })
       .when('/escola', {

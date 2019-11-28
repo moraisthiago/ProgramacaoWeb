@@ -15,7 +15,7 @@ var alunoController = function($scope, $mdToast, alunoApi){
         var toast = $mdToast.simple()
             .textContent('Aluno cadastrado com sucesso!')
             .position('bottom left')
-            .action('Entendi')
+            .action('OK')
             .hideDelay(6000);
         $mdToast.show(toast);
 
@@ -25,7 +25,7 @@ var alunoController = function($scope, $mdToast, alunoApi){
         var toast = $mdToast.simple()
             .textContent('Algum problema ocorreu no envio dos dados.')
             .position('bottom left')
-            .action('Entendi')
+            .action('OK')
             .hideDelay(6000);
         $mdToast.show(toast);
       });
