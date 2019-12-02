@@ -62,7 +62,7 @@
 
     <div class="form-group">
       <label for='nascimento'> Data de nascimento: </label>
-      <input type='text' ng-model='aluno.nascimento' name='nascimento' placeholder="AAAA-MM-DD" class="form-control" required ng-minlength="10" ng-maxlength="10">
+      <input type='date' ng-model='aluno.nascimento' name='nascimento' placeholder="DD/MM/AAAA" class="form-control" required ng-minlength="10" ng-maxlength="10">
 
       <div ng-show="alunoForm.nascimento.$error.required && alunoForm.nascimento.$dirty" class="alert alert-danger">
         Por favor, insira sua data de nascimento!
