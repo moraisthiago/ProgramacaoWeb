@@ -8,6 +8,7 @@ var enderecoController = function($scope, $mdToast, enderecoApi){
 
     enderecoApi.cadastrar(endereco)
       .then(function(response) {
+        console.log(response)
         var toast = $mdToast.simple()
             .textContent('Endereço cadastrado com sucesso!')
             .position('bottom left')
@@ -18,6 +19,7 @@ var enderecoController = function($scope, $mdToast, enderecoApi){
         limparFormulario();
       })
       .catch(function(error) {
+        console.log(error)
         var toast = $mdToast.simple()
             .textContent('Algum problema ocorreu no envio dos dados.')
             .position('bottom left')

@@ -23,18 +23,29 @@
 
     <div class="form-group">
       <label for='nome'>Número de Identificação do Professor:</label>
-      <input type='text' ng-model='disciplina.fk_id_professor' name='nome' class="form-control" required ng-minlength="1" ng-maxlength="10">
+      <input type='text' ng-model='disciplina.fk_id_professor' name='fk_id_professor' class="form-control" required ng-minlength="1">
 
       <div ng-show="disciplinaForm.fk_id_professor.$error.required && disciplinaForm.fk_id_professor.$dirty" class="alert alert-danger">
-        Por favor, insira o número de identificação da disciplina!
+        Por favor, insira o número de identificação do professor!
       </div>
 
       <div ng-show="disciplinaForm.fk_id_professor.$error.minlength && disciplinaForm.fk_id_professor.$dirty" class="alert alert-danger">
         O número deve conter, no mínimo, 1 caractere!
       </div>
+    </div>
 
-      <div ng-show="disciplinaForm.fk_id_professor.$error.maxlength && disciplinaForm.fk_id_professor.$dirty" class="alert alert-danger">
-        O número deve conter, no máximo, 10 caracteres!
+    <!-- ID Endereço Professor -->
+
+    <div class="form-group">
+      <label for='nome'>Número de Identificação do Endereço do Professor:</label>
+      <input type='text' ng-model='disciplina.fk_id_endereco' name='fk_id_endereco' class="form-control" required ng-minlength="1">
+
+      <div ng-show="disciplinaForm.fk_id_endereco.$error.required && disciplinaForm.fk_id_endereco.$dirty" class="alert alert-danger">
+        Por favor, insira o número de identificação do endereço do professor!
+      </div>
+
+      <div ng-show="disciplinaForm.fk_id_endereco.$error.minlength && disciplinaForm.fk_id_endereco.$dirty" class="alert alert-danger">
+        O número deve conter, no mínimo, 1 caractere!
       </div>
     </div>
 

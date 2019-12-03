@@ -20,7 +20,7 @@
     </div>
 
     <!-- Turno -->
-
+<!--
     <div class="form-group">
       <label for='turno'>Turno:</label>
       <input type='text' ng-model='curso.turno' name='turno' class="form-control" required ng-minlength="3" ng-maxlength="10">
@@ -37,12 +37,12 @@
         O turno deve conter, no máximo, 10 caracteres!
       </div>
     </div>
-
+-->
     <!-- ID Turno -->
 
     <div class="form-group">
       <label for='turno'>Número de Identificação do Turno:</label>
-      <input type='text' ng-model='curso.fk_id_turno' name='turno' class="form-control" required ng-minlength="1" ng-maxlength="10">
+      <input type='text' ng-model='curso.fk_id_turno' name='turno' class="form-control" required ng-minlength="1">
 
       <div ng-show="cursoForm.fk_id_turno.$error.required && cursoForm.fk_id_turno.$dirty" class="alert alert-danger">
         Por favor, insira o número de identificação do turno!
@@ -50,10 +50,6 @@
 
       <div ng-show="cursoForm.fk_id_turno.$error.minlength && cursoForm.fk_id_turno.$dirty" class="alert alert-danger">
         O número deve conter, no mínimo, 1 caractere!
-      </div>
-
-      <div ng-show="cursoForm.fk_id_turno.$error.maxlength && cursoForm.fk_id_turno.$dirty" class="alert alert-danger">
-        O número deve conter, no máximo, 10 caracteres!
       </div>
     </div>
 

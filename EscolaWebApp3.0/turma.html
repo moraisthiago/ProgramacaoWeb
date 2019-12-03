@@ -22,19 +22,15 @@
     <!-- ID Endereço -->
 
     <div class="form-group">
-      <label for='nome'>Número de Identificação do Endereço:</label>
-      <input type='text' ng-model='turma.fk_id_endereco' name='nome' class="form-control" required ng-minlength="1" ng-maxlength="10">
+      <label for='nome'>Número de Identificação do Curso:</label>
+      <input type='text' ng-model='turma.fk_id_curso' name='nome' class="form-control" required ng-minlength="1">
 
       <div ng-show="turmaForm.fk_id_endereco.$error.required && turmaForm.fk_id_endereco.$dirty" class="alert alert-danger">
-        Por favor, insira o número de identificação do endereco!
+        Por favor, insira o número de identificação do curso!
       </div>
 
       <div ng-show="turmaForm.fk_id_endereco.$error.minlength && turmaForm.fk_id_endereco.$dirty" class="alert alert-danger">
         O número deve ter, no mínimo, 1 caractere!
-      </div>
-
-      <div ng-show="turmaForm.fk_id_endereco.$error.maxlength && turmaForm.fk_id_endereco.$dirty" class="alert alert-danger">
-        O número deve ter, no máximo, 10 caracteres!
       </div>
     </div>
 

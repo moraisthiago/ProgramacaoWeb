@@ -23,7 +23,7 @@
 
     <div class="form-group">
       <label for='noe'>Número de Identificação do Endereço:</label>
-      <input type='text' ng-model='professor.fk_id_endereco' name='nome' class="form-control" required ng-minlength="1" ng-maxlength="10">
+      <input type='text' ng-model='professor.fk_id_endereco' name='nome' class="form-control" required ng-minlength="1">
 
       <div ng-show="professorForm.fk_id_endereco.$error.required && professorForm.fk_id_endereco.$dirty" class="alert alert-danger">
         Por favor, insira o número de identificação do endereco!
@@ -31,10 +31,6 @@
 
       <div ng-show="professorForm.fk_id_endereco.$error.minlength && professorForm.fk_id_endereco.$dirty" class="alert alert-danger">
         O número deve ter, no mínimo, 1 caracteres!
-      </div>
-
-      <div ng-show="professorForm.fk_id_endereco.$error.maxlength && professorForm.fk_id_endereco.$dirty" class="alert alert-danger">
-        O número deve ter, no máximo, 10 caracteres!
       </div>
     </div>
 

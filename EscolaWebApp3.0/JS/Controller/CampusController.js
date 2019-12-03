@@ -8,6 +8,7 @@ var campusController = function($scope, $mdToast, campusApi){
 
     campusApi.cadastrar(campus)
       .then(function(response) {
+        console.log(response)
         var toast = $mdToast.simple()
             .textContent('Campus cadastrado com sucesso!')
             .position('bottom left')
@@ -18,6 +19,7 @@ var campusController = function($scope, $mdToast, campusApi){
         limparFormulario();
       })
       .catch(function(error) {
+        console.log(error)
         var toast = $mdToast.simple()
             .textContent('Algum problema ocorreu no envio dos dados.')
             .position('bottom left')

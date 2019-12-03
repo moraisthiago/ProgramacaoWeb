@@ -42,7 +42,7 @@
 
     <div class="form-group">
       <label for='nome'>Número de Idenficação do Campus:</label>
-      <input type='text' ng-model='escola.fk_id_campus' name='nome' class="form-control" required ng-minlength="1" ng-maxlength="10">
+      <input type='text' ng-model='escola.fk_id_campus' name='nome' class="form-control" required ng-minlength="1">
 
       <div ng-show="escolaForm.fk_id_campus.$error.required && escolaForm.fk_id_campus.$dirty" class="alert alert-danger">
         Por favor, insira o número de identificação do campus!
@@ -52,9 +52,6 @@
         O número deve ter, no mínimo, 1 caractere!
       </div>
 
-      <div ng-show="escolaForm.fk_id_campus.$error.maxlength && escolaForm.fk_id_campus.$dirty" class="alert alert-danger">
-        O número deve ter, no máximo, 10 caracteres!
-      </div>
     </div>
 
     <!-- Botão -->

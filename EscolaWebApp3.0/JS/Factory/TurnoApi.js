@@ -1,6 +1,6 @@
 var turnoFactory = function($http){
 
-    var baseUrl = "localhost:5000";
+    var baseUrl = "http://127.0.0.1:5000";
 
     var _cadastrar = function(turno){
       return $http.post(baseUrl + "/turno", turno)

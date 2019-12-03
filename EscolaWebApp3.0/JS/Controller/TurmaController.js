@@ -8,6 +8,7 @@ var turmaController = function($scope, $mdToast, turmaApi){
 
     turmaApi.cadastrar(turma)
       .then(function(response) {
+        console.log(response)
         var toast = $mdToast.simple()
             .textContent('Turma cadastrada com sucesso!')
             .position('bottom left')
@@ -18,6 +19,7 @@ var turmaController = function($scope, $mdToast, turmaApi){
         limparFormulario();
       })
       .catch(function(error) {
+        console.log(error)
         var toast = $mdToast.simple()
             .textContent('Algum problema ocorreu no envio dos dados.')
             .position('bottom left')

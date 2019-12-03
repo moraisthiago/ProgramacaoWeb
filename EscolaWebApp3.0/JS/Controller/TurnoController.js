@@ -8,8 +8,9 @@ var turnoController = function($scope, $mdToast, turnoApi){
 
     turnoApi.cadastrar(turno)
       .then(function(response) {
+        console.log(response)
         var toast = $mdToast.simple()
-            .textContent('Truno cadastrado com sucesso!')
+            .textContent('Turno cadastrado com sucesso!')
             .position('bottom left')
             .action('Entendi')
             .hideDelay(6000);
@@ -18,6 +19,7 @@ var turnoController = function($scope, $mdToast, turnoApi){
         limparFormulario();
       })
       .catch(function(error) {
+        console.log(error)
         var toast = $mdToast.simple()
             .textContent('Algum problema ocorreu no envio dos dados.')
             .position('bottom left')

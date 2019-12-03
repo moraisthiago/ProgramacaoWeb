@@ -8,6 +8,7 @@ var cursoController = function($scope, $mdToast, cursoApi){
 
     cursoApi.cadastrar(curso)
       .then(function(response) {
+        console.log(response)
         var toast = $mdToast.simple()
             .textContent('Curso cadastrado com sucesso!')
             .position('bottom left')
@@ -18,6 +19,7 @@ var cursoController = function($scope, $mdToast, cursoApi){
         limparFormulario();
       })
       .catch(function(error) {
+        console.log(error)
         var toast = $mdToast.simple()
             .textContent('Algum problema ocorreu no envio dos dados.')
             .position('bottom left')

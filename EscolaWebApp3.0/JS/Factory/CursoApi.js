@@ -1,13 +1,13 @@
 var cursoFactory = function($http){
 
-    var baseUrl = "localhost:5000";
+    var baseUrl = "http://127.0.0.1:5000";
 
     var _cadastrar = function(curso){
-      return $http.post(baseUrl + "/curso", campus)
+      return $http.post(baseUrl + "/curso", curso)
     };
 
     var _atualizar = function(curso){
-      return $http.put(baseUrl + "/curso/" + encodeURI(id), campus)
+      return $http.put(baseUrl + "/curso/" + encodeURI(id), curso)
     };
 
     var _buscarPorId = function(id){
