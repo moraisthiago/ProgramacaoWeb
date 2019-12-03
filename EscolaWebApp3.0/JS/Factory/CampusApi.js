@@ -3,7 +3,7 @@ var campusFactory = function($http){
     var baseUrl = "http://127.0.0.1:5000";
 
     var _cadastrar = function(campus){
-      return $http.post(baseUrl + "/campus")
+      return $http.post(baseUrl + "/campus", campus)
     };
 
     var _atualizar = function(campus){
