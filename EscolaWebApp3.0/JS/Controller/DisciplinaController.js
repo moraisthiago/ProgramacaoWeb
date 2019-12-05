@@ -6,6 +6,12 @@ var disciplinaController = function($scope, $mdToast, disciplinaApi){
     // Criar uma cópia do disciplina do $scope.
     let disciplina = angular.copy($scope.disciplina);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('disciplinas', {reload: true, inherit: false, notify: true});
+
     disciplinaApi.cadastrar(disciplina)
       .then(function(response) {
         console.log(response)

@@ -6,6 +6,12 @@ var cursoController = function($scope, $mdToast, cursoApi){
     // Criar uma cópia do curso do $scope.
     let curso = angular.copy($scope.curso);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('cursos', {reload: true, inherit: false, notify: true});
+
     cursoApi.cadastrar(curso)
       .then(function(response) {
         console.log(response)

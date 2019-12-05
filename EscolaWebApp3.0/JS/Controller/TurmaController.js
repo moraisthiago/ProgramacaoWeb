@@ -6,6 +6,12 @@ var turmaController = function($scope, $mdToast, turmaApi){
     // Criar uma cópia do turma do $scope.
     let turma = angular.copy($scope.turma);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('turmas', {reload: true, inherit: false, notify: true});
+
     turmaApi.cadastrar(turma)
       .then(function(response) {
         console.log(response)

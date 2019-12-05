@@ -6,6 +6,12 @@ var enderecoController = function($scope, $mdToast, enderecoApi){
     // Criar uma cópia do endereco do $scope.
     let endereco = angular.copy($scope.endereco);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('enderecos', {reload: true, inherit: false, notify: true});
+
     enderecoApi.cadastrar(endereco)
       .then(function(response) {
         console.log(response)

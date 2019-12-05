@@ -6,6 +6,12 @@ var campusController = function($scope, $mdToast, campusApi){
     // Criar uma cópia do campus do $scope.
     let campus = angular.copy($scope.campus);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('campi', {reload: true, inherit: false, notify: true});
+
     campusApi.cadastrar(campus)
       .then(function(response) {
         console.log(response)

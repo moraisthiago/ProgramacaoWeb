@@ -6,6 +6,12 @@ var escolaController = function($scope, $mdToast, escolaApi){
     // Criar uma cópia do escola do $scope.
     let escola = angular.copy($scope.escola);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('escolas', {reload: true, inherit: false, notify: true});
+
     escolaApi.cadastrar(escola)
       .then(function(response) {
         console.log(response)

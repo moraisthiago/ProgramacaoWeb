@@ -6,6 +6,12 @@ var professorController = function($scope, $mdToast, professorApi){
     // Criar uma cópia do professor do $scope.
     let professor = angular.copy($scope.professor);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('professores', {reload: true, inherit: false, notify: true});
+
     professorApi.cadastrar(professor)
       .then(function(response) {
         console.log(response)

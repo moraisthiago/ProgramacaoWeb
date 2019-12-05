@@ -6,6 +6,12 @@ var turnoController = function($scope, $mdToast, turnoApi){
     // Criar uma cópia do turno do $scope.
     let turno = angular.copy($scope.turno);
 
+    // Limpar formulário.
+    limparFormulario();
+
+    // Redirecionamento de página.
+    $state.transitionTo('turnos', {reload: true, inherit: false, notify: true});
+
     turnoApi.cadastrar(turno)
       .then(function(response) {
         console.log(response)
