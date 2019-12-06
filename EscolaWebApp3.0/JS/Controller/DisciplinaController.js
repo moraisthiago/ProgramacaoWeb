@@ -1,4 +1,4 @@
-var disciplinaController = function($scope, $mdToast, disciplinaApi){
+var disciplinaController = function($scope, $mdToast, disciplinaApi, $state){
 
   $scope.disciplina = {};
 
@@ -22,7 +22,6 @@ var disciplinaController = function($scope, $mdToast, disciplinaApi){
             .hideDelay(6000);
         $mdToast.show(toast);
 
-        limparFormulario();
       })
       .catch(function(error) {
         console.log(error)

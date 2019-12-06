@@ -1,4 +1,4 @@
-var enderecoController = function($scope, $mdToast, enderecoApi){
+var enderecoController = function($scope, $mdToast, enderecoApi, $state){
 
   $scope.endereco = {};
 
@@ -22,7 +22,6 @@ var enderecoController = function($scope, $mdToast, enderecoApi){
             .hideDelay(6000);
         $mdToast.show(toast);
 
-        limparFormulario();
       })
       .catch(function(error) {
         console.log(error)

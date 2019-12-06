@@ -1,4 +1,4 @@
-var escolaController = function($scope, $mdToast, escolaApi){
+var escolaController = function($scope, $mdToast, escolaApi, $state){
 
   $scope.escola = {};
 
@@ -22,7 +22,6 @@ var escolaController = function($scope, $mdToast, escolaApi){
             .hideDelay(6000);
         $mdToast.show(toast);
 
-        limparFormulario();
       })
       .catch(function(error) {
         console.log(error)

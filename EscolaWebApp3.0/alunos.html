@@ -1,5 +1,4 @@
 <form name="alunoForm">
-  <div class="form-group">
 
     <!-- Nome -->
 
@@ -21,6 +20,34 @@
     </div>
 
     <!-- Botões -->
-    <button type='reset' name='limpar' class="btn btn-secondary btn-lg btn-block">Limpar</button>
-    <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block">Listar</button>
-</form>
+    <button type='reset' ng-click="limparBusca()" name='limpar' class="btn btn-secondary btn-lg btn-block">Limpar</button>
+    <button ng-click="listar()" class="btn btn-dark btn-lg btn-block">Listar</button>
+ </form>
+
+<!-- Tabela de Alunos -->
+<div>
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Matrícula</th>
+        <th scope="col">Nascimento</th>
+        <th scope="col">Endereco</th>
+        <th scope="col">Curso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="aluno in alunos">
+        <td scope="row">{{aluno.id_aluno}}</td>
+        <td scope="row">{{aluno.nome}}</td>
+        <td scope="row">{{aluno.cpf}}</td>
+        <td scope="row">{{aluno.matricula}}</td>
+        <td scope="row">{{aluno.nascimento}}</td>
+        <td scope="row">{{aluno.fk_id_endereco}}</td>
+        <td scope="row">{{aluno.fk_id_curso}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

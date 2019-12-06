@@ -22,8 +22,8 @@
     <!-- ID Endereço -->
 
     <div class="form-group">
-      <label for='nome'>Número de Identificação do Endereço:</label>
-      <input type='text' ng-model='escola.fk_id_endereco' name='nome' class="form-control" required ng-minlength="1" ng-maxlength="10">
+      <label for='fk_id_endereco'>Número de Identificação do Endereço:</label>
+      <input type='text' ng-model='escola.fk_id_endereco' name='fk_id_endereco' class="form-control" required ng-minlength="1" ng-maxlength="10">
 
       <div ng-show="escolaForm.fk_id_endereco.$error.required && escolaForm.fk_id_endereco.$dirty" class="alert alert-danger">
         Por favor, insira o número de identificação do endereço!
@@ -41,8 +41,8 @@
     <!-- ID Campus -->
 
     <div class="form-group">
-      <label for='nome'>Número de Idenficação do Campus:</label>
-      <input type='text' ng-model='escola.fk_id_campus' name='nome' class="form-control" required ng-minlength="1">
+      <label for='fk_id_campus'>Número de Idenficação do Campus:</label>
+      <input type='text' ng-model='escola.fk_id_campus' name='fk_id_campus' class="form-control" required ng-minlength="1">
 
       <div ng-show="escolaForm.fk_id_campus.$error.required && escolaForm.fk_id_campus.$dirty" class="alert alert-danger">
         Por favor, insira o número de identificação do campus!
@@ -54,8 +54,8 @@
 
     </div>
 
-    <!-- Botão -->
-    <input type= 'reset' name='limpar' value= 'Limpar' class="btn btn-secondary btn-lg btn-block">
+    <!-- Botões -->
+    <button type='reset' name='limpar' class="btn btn-secondary btn-lg btn-block">Limpar</button>
     <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block">Cadastrar</button>
 
 </form>

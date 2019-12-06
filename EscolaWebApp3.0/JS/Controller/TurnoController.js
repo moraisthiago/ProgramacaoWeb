@@ -1,4 +1,4 @@
-var turnoController = function($scope, $mdToast, turnoApi){
+var turnoController = function($scope, $mdToast, turnoApi, $state){
 
   $scope.turno = {};
 
@@ -22,7 +22,6 @@ var turnoController = function($scope, $mdToast, turnoApi){
             .hideDelay(6000);
         $mdToast.show(toast);
 
-        limparFormulario();
       })
       .catch(function(error) {
         console.log(error)

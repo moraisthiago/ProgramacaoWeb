@@ -2,14 +2,15 @@ var disciplinasController = function($scope, $mdToast, disciplinaApi) {
 
   $scope.disciplinas = [];
 
-  let listar = function() {
-      disciplinaApi.listar(nome)
-        .then(function(response) {
-          $scope.disciplinas = response.data;
-        })
-        .catch(function(error) {
+  $scope.listar = function() {
+    console.log("Listando")
+    disciplinaApi.listar()
+      .then(function(response) {
+        $scope.disciplinas = response.data;
+      })
+      .catch(function(error) {
 
-        });
+      });
   };
 
   $scope.pesquisar = function(nome) {
@@ -26,9 +27,9 @@ var disciplinasController = function($scope, $mdToast, disciplinaApi) {
 
   $scope.limparBusca = function() {
     $scope.nome = "";
-    $scope.apresentacoes = [];
+    $scope.disciplinas = [];
   };
 
 }
 
-app.controller('DisciplinaController', disciplinasController);
+app.controller('DisciplinasController', disciplinasController);

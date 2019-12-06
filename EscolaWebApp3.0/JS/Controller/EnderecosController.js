@@ -2,14 +2,15 @@ var enderecosController = function($scope, $mdToast, enderecoApi) {
 
   $scope.enderecos = [];
 
-  let listar = function() {
-      enderecoApi.listar(nome)
-        .then(function(response) {
-          $scope.enderecos = response.data;
-        })
-        .catch(function(error) {
+  $scope.listar = function() {
+    console.log("Listando")
+    enderecoApi.listar()
+      .then(function(response) {
+        $scope.enderecos = response.data;
+      })
+      .catch(function(error) {
 
-        });
+      });
   };
 
   $scope.pesquisar = function(nome) {
@@ -26,7 +27,7 @@ var enderecosController = function($scope, $mdToast, enderecoApi) {
 
   $scope.limparBusca = function() {
     $scope.nome = "";
-    $scope.apresentacoes = [];
+    $scope.enderecos = [];
   };
 
 }

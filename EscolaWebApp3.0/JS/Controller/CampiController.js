@@ -2,14 +2,15 @@ var campiController = function($scope, $mdToast, campusApi) {
 
   $scope.campi = [];
 
-  let listar = function() {
-      campusApi.listar(nome)
-        .then(function(response) {
-          $scope.campi = response.data;
-        })
-        .catch(function(error) {
+  $scope.listar = function() {
+    console.log("Listando")
+    campusApi.listar()
+      .then(function(response) {
+        $scope.campi = response.data;
+      })
+      .catch(function(error) {
 
-        });
+      });
   };
 
   $scope.pesquisar = function(nome) {
@@ -26,7 +27,7 @@ var campiController = function($scope, $mdToast, campusApi) {
 
   $scope.limparBusca = function() {
     $scope.nome = "";
-    $scope.apresentacoes = [];
+    $scope.campi = [];
   };
 
 }

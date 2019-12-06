@@ -3,7 +3,7 @@
     <!-- Nome -->
 
     <div class="form-group">
-      <label for='noe'>Nome:</label>
+      <label for='nome'>Nome:</label>
       <input type='text' ng-model='professor.nome' name='nome' class="form-control" required ng-minlength="10" ng-maxlength="45">
 
       <div ng-show="professorForm.nome.$error.required && professorForm.nome.$dirty" class="alert alert-danger">
@@ -22,8 +22,8 @@
     <!-- ID Endereço -->
 
     <div class="form-group">
-      <label for='noe'>Número de Identificação do Endereço:</label>
-      <input type='text' ng-model='professor.fk_id_endereco' name='nome' class="form-control" required ng-minlength="1">
+      <label for='fk_id_endereco'>Número de Identificação do Endereço:</label>
+      <input type='text' ng-model='professor.fk_id_endereco' name='fk_id_endereco' class="form-control" required ng-minlength="1">
 
       <div ng-show="professorForm.fk_id_endereco.$error.required && professorForm.fk_id_endereco.$dirty" class="alert alert-danger">
         Por favor, insira o número de identificação do endereco!
@@ -34,8 +34,8 @@
       </div>
     </div>
 
-    <!-- Botão -->
-    <input type= 'reset' name='limpar' value= 'Limpar' class="btn btn-secondary btn-lg btn-block">
+    <!-- Botões -->
+    <button type='reset' name='limpar' class="btn btn-secondary btn-lg btn-block">Limpar</button>
     <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block">Cadastrar</button>
 
 </form>

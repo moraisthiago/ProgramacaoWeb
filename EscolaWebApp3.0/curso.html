@@ -19,25 +19,6 @@
       </div>
     </div>
 
-    <!-- Turno -->
-<!--
-    <div class="form-group">
-      <label for='turno'>Turno:</label>
-      <input type='text' ng-model='curso.turno' name='turno' class="form-control" required ng-minlength="3" ng-maxlength="10">
-
-      <div ng-show="cursoForm.turno.$error.required && cursoForm.turno.$dirty" class="alert alert-danger">
-        Por favor, insira o seu turno!
-      </div>
-
-      <div ng-show="cursoForm.turno.$error.minlength && cursoForm.turno.$dirty" class="alert alert-danger">
-        O turno deve conter, no mínimo, 3 caracteres!
-      </div>
-
-      <div ng-show="cursoForm.turno.$error.maxlength && cursoForm.turno.$dirty" class="alert alert-danger">
-        O turno deve conter, no máximo, 10 caracteres!
-      </div>
-    </div>
--->
     <!-- ID Turno -->
 
     <div class="form-group">
@@ -53,8 +34,8 @@
       </div>
     </div>
 
-    <!-- Botão -->
-    <input type= 'reset' name='limpar' value= 'Limpar' class="btn btn-secondary btn-lg btn-block">
+    <!-- Botões -->
+    <button type='reset' name='limpar' class="btn btn-secondary btn-lg btn-block">Limpar</button>
     <button ng-click="cadastrar()" class="btn btn-dark btn-lg btn-block">Cadastrar</button>
 
 </form>

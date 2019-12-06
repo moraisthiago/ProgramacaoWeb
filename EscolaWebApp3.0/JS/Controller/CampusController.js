@@ -1,4 +1,4 @@
-var campusController = function($scope, $mdToast, campusApi){
+var campusController = function($scope, $mdToast, campusApi, $state){
 
   $scope.campus = {};
 
@@ -22,7 +22,7 @@ var campusController = function($scope, $mdToast, campusApi){
             .hideDelay(6000);
         $mdToast.show(toast);
 
-        limparFormulario();
+        
       })
       .catch(function(error) {
         console.log(error)

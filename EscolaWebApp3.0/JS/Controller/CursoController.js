@@ -1,4 +1,4 @@
-var cursoController = function($scope, $mdToast, cursoApi){
+var cursoController = function($scope, $mdToast, cursoApi, $state){
 
   $scope.curso = {};
 
@@ -22,7 +22,6 @@ var cursoController = function($scope, $mdToast, cursoApi){
             .hideDelay(6000);
         $mdToast.show(toast);
 
-        limparFormulario();
       })
       .catch(function(error) {
         console.log(error)

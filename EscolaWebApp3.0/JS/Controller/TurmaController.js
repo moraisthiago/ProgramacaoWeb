@@ -1,4 +1,4 @@
-var turmaController = function($scope, $mdToast, turmaApi){
+var turmaController = function($scope, $mdToast, turmaApi, $state){
 
   $scope.turma = {};
 
@@ -22,7 +22,6 @@ var turmaController = function($scope, $mdToast, turmaApi){
             .hideDelay(6000);
         $mdToast.show(toast);
 
-        limparFormulario();
       })
       .catch(function(error) {
         console.log(error)
