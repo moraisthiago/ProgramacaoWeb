@@ -32,4 +32,4 @@ var professoresController = function($scope, $mdToast, professorApi) {
 
 }
 
-app.controller('ProfessoresdController', professoresController);
+app.controller('ProfessoresController', professoresController);

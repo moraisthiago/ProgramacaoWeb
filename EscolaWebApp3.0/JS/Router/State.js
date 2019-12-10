@@ -131,9 +131,9 @@ app.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
       .state('turmas', {
         url: '/turmas',
-        title: 'EscolaApp - Listar Tirmas',
+        title: 'EscolaApp - Listar Turmas',
         templateUrl: 'turmas.html',
-        controller: 'TirmasController'
+        controller: 'TurmasController'
       })
 
       //Turno
